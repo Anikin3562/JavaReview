@@ -235,7 +235,7 @@ public class Trees{
 		// A single left rotation does not fix Right-Left
 
 		// Left-rotate left child of unbalanced node,then right-rotate unbalanced node to fix Left-Right
-		// right-rotate right child of unbalanced node, then left-rotate unbalanced not to fix Right-left
+		// right-rotate right child of unbalanced node, then left-rotate unbalanced node to fix Right-left
 		// To fix Left-Right and Right-Left cases, we require these double rotations. 
 	}
 }
