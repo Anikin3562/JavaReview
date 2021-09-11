@@ -127,5 +127,10 @@ public class HashMap{
 		
 	}
 
+	// TODO
+	public int remove(String key){
+
+	}
+
 
 }
