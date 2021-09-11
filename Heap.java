@@ -50,10 +50,39 @@ public class Heap{
 		heap.remove();
 		heap.printHeap();
 
+		/*
 		heap.addElement(5);
 		heap.addElement(7);
 		heap.addElement(9);
 		heap.printHeap();
+		*/
+		
+		int[] arr = {5,7,3,2,4,6,1};
+
+		heap.addElement(5);
+		heap.addElement(7);
+		heap.addElement(3);
+		heap.addElement(2);
+		heap.addElement(4);
+		heap.addElement(6);
+		heap.addElement(1);
+		heap.printHeap();
+
+		heap.remove();
+		heap.printHeap();
+
+		heap.remove();
+		heap.printHeap();
+
+		heap.remove();
+		heap.printHeap();
+
+		heap.remove();
+		heap.printHeap();
+
+		heap.remove();
+		heap.printHeap();
+		
 
 
 	}
@@ -203,6 +232,27 @@ public class Heap{
 
 		return root;  
 
+	}
+
+	public static int[] sort(int[] arr){
+
+		// Convert to heap
+		Heap sortHeap = new Heap(arr.length+1);
+		int sortedArr[] = new int[arr.length];
+
+		for(int i = 0; i < arr.length-1; i++)
+			sortHeap.addElement(arr[i]);
+
+
+		for(int i = 0; i < sortedArr.length-1; i++){
+
+			sortedArr[i] = sortHeap.remove();
+			sortHeap.printHeap();
+
+			//System.out.println(sortedArr[i]);
+		}
+
+		return sortedArr;
 	}
 }
 	// Prioritization Problems: 
