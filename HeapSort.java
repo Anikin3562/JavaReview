@@ -15,9 +15,6 @@ public class HeapSort{
 			System.out.print(e + ", ");
 		System.out.println();
 
-
-
-
 	}
 
 	HeapSort(int size){
