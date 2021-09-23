@@ -40,7 +40,6 @@ public class DataAndExpressions {
 		System.out.println("s5: " + s5);
 
 		// Precedence
-
 		x = 3; 
 		int y = 5; 
 		String s6 = x + y + "total";

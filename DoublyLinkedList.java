@@ -22,12 +22,38 @@ public class DoublyLinkedList{
 		myList.insertAfter(second, 2);
 		myList.printList();
 
-		System.out.println(second.prev.data);
-		System.out.println(second.next.data);
-		System.out.println(third.prev.data);
-		System.out.println(third.prev.prev.data);
+		//System.out.println(second.prev.data);
+		//System.out.println(second.next.data);
+		//System.out.println(third.prev.data);
+		//System.out.println(third.prev.prev.data);
 
+		myList.insertAtFront(0);
+		myList.printList();
 
+		System.out.println(myList.head.data);
+		System.out.println(myList.head.next.data);
+		System.out.println(myList.head.next.prev.data);
+
+		myList.insertAtEnd(4);
+		myList.printList();
+
+		myList.insertBefore(second, 1);
+		myList.printList();
+
+		myList.delete(1);
+		myList.printList();
+
+		myList.delete(1);
+		myList.printList();
+
+		myList.delete(1);
+		myList.printList();
+
+		myList.delete(2);
+		myList.printList();
+
+		myList.insertAfter(myList.head, 1);
+		myList.printList();
 
 	}
 
@@ -62,18 +88,66 @@ public class DoublyLinkedList{
 	}
 
 	public void insertAtFront(int d){
-		// TODO
+
+		D_Node front = this.head; 
+		D_Node newNode = new D_Node(d);
+
+		// Just need to adjust links
+		newNode.next = front; 
+		front.prev = newNode;
+
+		this.head = newNode; 
+
+
 	}
 
 	public void insertAtEnd(int d){
 		// TODO
+		D_Node curr = this.head; 
+		D_Node newNode = new D_Node(d);
+
+		while(curr.next != null){
+			curr = curr.next; 
+		}
+
+		curr.next = newNode; 
+		newNode.prev = curr;  
+
 	}
 
 	public void insertBefore(D_Node node, int d){
 		// TODO
+		D_Node newNode = new D_Node(d);
+		D_Node curr = this.head; 
+
+		while(curr != null && curr != node){
+			curr = curr.next; 
+		}
+		if (curr == null) return; 
+		
+		// curr == node
+		newNode.prev = curr.prev;
+		curr.prev.next = newNode; 
+		curr.prev = newNode;
+		newNode.next = curr; 
+
 	}
 
 	public void delete(int d){
 		// TODO
+		
+		D_Node curr = this.head; 
+
+		while(curr != null && curr.data != d){
+			curr = curr.next; 
+		}
+
+		if(curr == null) return; 
+
+		// Unlinking curr
+		curr.prev.next = curr.next; 
+		curr.next.prev = curr.prev; 
+
+
 	}
 }

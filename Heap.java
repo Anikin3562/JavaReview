@@ -286,7 +286,7 @@ public class Heap{
 	// Good in theory, but tree tends to become unbalanced to the right, making tree height approach N (making operations take O(N))
 
 	// Heaps: 
-	// A complete binary tree with vertical ordering. 
+	// A complete binary tree with vertical ordering.  
 	// Complete Tree: Every level is full except possibly at the lowest level (leaves), which must be filled left to right. 
 
 	// Heap Ordering: 

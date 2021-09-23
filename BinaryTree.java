@@ -242,6 +242,7 @@ public class BinaryTree{
 		if(replacement != replacedNode.rightChild){
 
 			replacementParent.leftChild = replacement.rightChild;  // Setting left child of replacement's parent to be  replacement's right child (Replacement does not have a left child or else it wouldn't be the propper replacement)
+			
 			replacement.rightChild = replacedNode.rightChild; // Swapping replacement with the node to be replaced 
 		}
 
