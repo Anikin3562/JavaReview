@@ -67,8 +67,6 @@ public class Graph{
 		graph.addEdge(2,5);
 
 		System.out.println(graph.getNeighbours(2));
-
-
 	}
 
 	//  Graph: 
@@ -360,7 +358,7 @@ public class Graph{
 	// Find the vertices which have a direct path for start node,and update their distances. 
 	
 	// At each step:
-	// 1. Pick closesnt unknown vertex to v
+	// 1. Pick closest unknown vertex to v
 	// 2. Add it to the "cloud" of known vertices
 	// 3. Update distances for nodes
 

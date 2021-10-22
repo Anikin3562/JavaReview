@@ -173,7 +173,7 @@ public class Heap{
 	// Remove min from heap
 	public int remove(){
 
-
+  
 		int root = this.heap.get(1);
 
 		if(this.heapOccupied == 1){
